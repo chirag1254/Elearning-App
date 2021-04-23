@@ -1,0 +1,141 @@
+<StudentHomeScreen>:
+    MDFloatLayout:
+        MDToolbar:
+            md_bg_color: 25/255, 181/255, 254/255, 1
+            size_hint: 1,0.15
+            pos_hint: {"top":1,"right":1}
+            title : "E-Learning"
+            left_action_items: [['menu', lambda x: nav_drawer.set_state()]]
+            right_action_items :[["file-search",lambda x:app.Search()]] 
+        
+            
+
+
+        MDIconButton:
+            icon: "book-plus"
+            md_bg_color: 25/255, 181/255, 254/255, 1
+            size_hint: 0.14,0.11
+            pos_hint: {"top":0.15,"right":0.93}
+            
+
+        MDNavigationDrawer:
+            id : nav_drawer
+            MDScreen:
+                MDFloatLayout:
+                    MDBoxLayout:
+                        md_bg_color: 25/255, 181/255, 254/255, 1
+                        size_hint: 1,0.07
+                        pos_hint: {"top":1,"right":1}
+                        MDLabel:
+                            text: "   Menu"
+                            theme_text_color: "Custom"
+                            text_color:(1,1,1,1)
+                            
+
+                    
+                    MDGridLayout:
+                        rows:1
+                        cols:2
+                        size_hint: 1,0.2
+                        pos_hint: {"top":0.93,"right":1}
+                        MDFloatLayout:
+                            size_hint_x:0.4
+                            AsyncImage:
+                                
+                                size_hint: 1,1
+                                pos_hint: {"top":1,"right":1}
+                                source:"images\profile.jpg"
+                                id: profile_pic
+                            MDIconButton:
+                                icon:"camera"
+                                pos_hint:{"top":0.48,"right":1}
+                                user_font_size: "30sp"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.primary_color
+                                on_release:app.show_example_list_bottom_sheet()
+                        MDBoxLayout:
+                            
+                            MDLabel:
+                                text : "Profile"
+                                font_style:"H5"
+                                theme_text_color: "Custom"
+                                text_color:(0,0,0,1)
+                                halign:"center"
+                                id: user_name_label
+                    MDBoxLayout:
+                        size_hint:1,0.0005
+                        pos_hint:{"top": 0.73,"right":1}
+                        md_bg_color:0,0,0,1
+
+                    MDGridLayout:
+                        id : nav_drawer_options
+                        cols:1
+                        size_hint:1,0.5
+                        pos_hint:{"top": 0.67 ,"right":1}
+                        spacing: 10,10
+                        padding:10,10
+                      
+                        MDRectangleFlatIconButton:
+                            text: "My Acount"
+                            text_color: 1,1,1,1
+                            md_bg_color: 25/255, 181/255, 254/255, 1   
+                            icon: "account"
+                            width: dp(260)  
+                            id: my_acount
+                          
+                          
+                        MDRectangleFlatIconButton:
+                            text: "Payment Options"
+                            text_color: 1,1,1,1
+                            md_bg_color: 25/255, 181/255, 254/255, 1   
+                            icon: "contactless-payment"
+                            width: dp(260)  
+                            id: payment_options
+                        MDRectangleFlatIconButton:
+                            text: "filter"
+                            text_color: 1,1,1,1
+                            md_bg_color: 25/255, 181/255, 254/255, 1   
+                            icon: "filter"
+                            width: dp(260)  
+                            id: filter
+                            
+                        
+                        MDRectangleFlatIconButton:
+                            text: "Notes"
+                            text_color: 1,1,1,1
+                            md_bg_color: 25/255, 181/255, 254/255, 1   
+                            icon: "notebook"
+                            width: dp(260)  
+                            id: notes
+                        MDRectangleFlatIconButton:
+                            text: "Queries"
+                            text_color: 1,1,1,1
+                            md_bg_color: 25/255, 181/255, 254/255, 1   
+                            icon: "comment-question"
+                            width: dp(260)  
+                            id: queries  
+                        MDRectangleFlatIconButton:
+                            text: "Contact"
+                            text_color: 1,1,1,1
+                            md_bg_color: 25/255, 181/255, 254/255, 1   
+                            icon: "contacts"
+                            width: dp(260)  
+                            id: contact
+                        MDRectangleFlatIconButton:
+                            text: "Sign out"
+                            text_color: 1,1,1,1
+                            md_bg_color: 25/255, 181/255, 254/255, 1   
+                            icon: "logout"
+                            width: dp(260)  
+                            id: sign_out  
+                    MDIconButton:
+                        size_hint:0.13,0.1
+                        pos_hint:{"top": 0.16 ,"right":0.9}
+                        icon: "help"
+                        md_bg_color:(82/255, 179/255, 217/255, 1)
+
+                            
+                                                                     
+                                                
+
+

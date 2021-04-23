@@ -1,0 +1,55 @@
+
+#: include KV/statingscreen.kv
+#: include KV/logoscreen.kv
+#: include KV/loginchoice.kv
+#: include KV/student_kv/studentsignup.kv
+#: include KV/student_kv/studentsignin.kv
+#: include KV/student_kv/studenthomescreen.kv
+#: include KV/student_kv/studentsearchscreen.kv
+#: include KV/teacher_kv/teacherloginchoice.kv
+
+
+
+MDBoxLayout:
+    size_hint: 1,1
+    ScreenManager:
+        id:screen_manager
+        LogoScreen:
+            id: logo_screen
+            name: "logo_screen"
+        StartingScreen:
+            id:starting_screen
+            name:"starting_screen"
+        LoginChoice:
+            id : login_choice
+            name : 'login_choice'
+        
+        StudentSignupScreen:
+            # md_bg_color : (82/255, 179/255, 217/255, 1)
+            id: student_signup_screen
+            name: "student_signup_screen"
+        
+        StudentSigninScreen:
+            # md_bg_color : (82/255, 179/255, 217/255, 1)
+            id: student_signin_screen
+            name: "student_signin_screen"
+        StudentHomeScreen:
+            # md_bg_color : (82/255, 179/255, 217/255, 1)
+            id: student_home_screen
+            name: "student_home_screen"
+        StudentSearchScreen:
+            id: search_screen
+            name: "search_screen"
+        
+        
+        # TeacherLoginChoice:
+        #     # md_bg_color : (82/255, 179/255, 217/255, 1)
+        #     id: student_login_choice
+        #     name: "student_login_choice"
+        
+            
+        
+        
+        
+
+        

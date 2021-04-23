@@ -1,0 +1,77 @@
+<StudentSigninScreen>:
+    FitImage:
+        source: 'images/bg.jpg'
+    MDFloatLayout:
+        MDIconButton:
+            icon: 'notebook'
+            user_font_size: "64sp"
+            pos_hint:{'top':0.85,'right':0.65}
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+        
+        MDTextFieldRound:
+            id: student_signin_email
+            hint_text: "E-Mail address"
+            icon_left: "email"
+            size_hint: 0.75,0.1
+            pos_hint:{'top':0.7,'center_x':0.5}
+            required: True
+            icon_left_color: 0,0,0.8,1
+            line_color: 1,1,1,1
+            normal_color:1,1,1,1
+            color_active:1,1,1,1
+        MDTextFieldRound:
+            id: student_signin_password
+            hint_text: "Password"
+            icon_left: "key-variant"
+            size_hint: 0.75,0.1
+            pos_hint:{'top':0.58,'center_x':0.5}
+            required: True
+            icon_left_color: 0,0,0.8,1
+            line_color: 1,1,1,1
+            normal_color:1,1,1,1
+            color_active:1,1,1,1
+            password:True
+        MDRoundFlatButton:
+            id: student_signin
+            text: "Sign in"
+            text_color: 1,1,1,1
+            md_bg_color: 1,165/255,0,1
+            size_hint: 0.85,0.08
+            pos_hint:{'top':0.46,'center_x':0.5}
+            on_release: app.sign_in_user(student_signin_email.text,student_signin_password.text)
+        MDRoundFlatIconButton:
+            id : student_signin_fb
+            text: "Sign in with Facebook"
+            halign: 'center'
+            text_color: 1,1,1,1
+            icon:"facebook"
+            md_bg_color: 59/255,89/255,153/255,1
+            size_hint: 0.85,0.05
+            pos_hint:{'top':0.28,'center_x':0.5}
+        MDRoundFlatIconButton:
+            id : student_signin_goo
+            text: "Sign in with Google"
+            halign: 'center'
+            text_color: 0,0,0,1
+            icon:"google"
+            md_bg_color: 1,1,1,1
+            size_hint: 0.85,0.05
+            pos_hint:{'top':0.21,'center_x':0.5}
+        MDBoxLayout: 
+            size_hint: 0.8,0.002
+            pos_hint:{'top':0.33,'center_x':0.5}
+            md_bg_color:0,0,0,1
+        MDLabel:
+            text: "or"
+            halign: "center"
+            pos_hint:{'center_y':0.33,'center_x':0.5}
+            text_sixe:'5sp'
+        MDFlatButton:
+            id: forgot_password
+            text: "Forgot password?"
+            pos_hint:{'top':0.15,'center_x':0.27}
+        MDFlatButton:
+            text: "New here? Sign up"
+            pos_hint:{'top':0.15,'center_x':0.67}
+            on_release: app.change_screen('student_signup_screen')

@@ -1,0 +1,48 @@
+
+<LoginChoice>:
+    
+    MDFloatLayout:
+        MDBoxLayout:
+            orientiation:'vertical'
+            canvas.before:
+                Color:
+                    rgba: 25/255, 181/255, 254/255, 1
+                Triangle:
+                    points: [0, self.size[1],self.size[0],self.size[1],0,self.size[1]-(0.4*self.size[1])]
+            
+                Color:
+                    rgba: 25/255, 181/255, 254/255, 0.7
+                Triangle:
+                    points: [0, self.size[1],self.size[0],self.size[1],self.size[0],self.size[1]-(0.4*self.size[1])]
+        
+
+        MDFloatLayout:
+            size_hint:1,0.6
+            pos_hint:{'top':0.6,'right':1}
+            ImageButton:
+                size_hint:0.25,0.25
+                pos_hint:{'top':1,'right':0.63}
+                source:'images\student-icon.jpg'
+                on_release:app.change_screen('student_signin_screen')
+            MDLabel:
+                halign:'center'
+                text:'Student'
+                size_hint:1,0.6
+                pos_hint:{'top':1,'right':1}
+            MDBoxLayout:
+                size_hint:0.8,0.002
+                pos_hint:{'top':0.6,'right':0.9}
+                md_bg_color:0,0,0,1
+                
+            ImageButton:
+                size_hint:0.25,0.25
+                pos_hint:{'top':0.5,'right':0.63}
+                source:'images/the-teacher-icon.jpg'
+                # on_release:app.change_screen('loginchoice2')
+            MDLabel:
+                halign:'center'
+                text:'Teacher'
+                size_hint:1,0.6
+                pos_hint:{'top':0.5,'right':1}
+
+            
